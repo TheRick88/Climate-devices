@@ -48,7 +48,6 @@ getDevices();
 // LOG IN FUNCTION
 
 const loginButton = document.getElementById('login');
-console.log('the login button', loginButton);
 loginButton.addEventListener('onclick', logIn);
 
 async function logIn() {
