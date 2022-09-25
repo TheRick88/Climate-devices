@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "singularName": "location",
+    "pluralName": "locations",
+    "displayName": "location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Latitude": {
+      "type": "decimal",
+      "required": true,
+      "unique": true
+    },
+    "Longitude": {
+      "type": "decimal",
+      "required": true,
+      "unique": true
+    },
+    "Location": {
+      "type": "enumeration",
+      "enum": [
+        "park",
+        "street",
+        "lake",
+        "canal"
+      ],
+      "required": true
+    },
+    "Start": {
+      "type": "datetime",
+      "required": true
+    },
+    "End": {
+      "type": "datetime"
+    },
+    "device": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::device.device",
+      "inversedBy": "locations"
+    },
+    "tests": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::test.test",
+      "inversedBy": "locations"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devices",
+  "info": {
+    "singularName": "device",
+    "pluralName": "devices",
+    "displayName": "device",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Timestamp": {
+      "type": "datetime",
+      "required": true
+    },
+    "Battery": {
+      "type": "integer",
+      "required": true,
+      "default": 10
+    },
+    "OutOfOrder": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "tests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::test.test",
+      "mappedBy": "device"
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location.location",
+      "mappedBy": "device"
+    }
+  }
+}

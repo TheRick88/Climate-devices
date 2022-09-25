@@ -1,0 +1,26 @@
+Cinquantenaire
+
+50.84121685147998, 4.391631285451981
+
+
+Pl. des Palais
+
+50.84266669428695, 4.362699910041716
+
+
+Lake Marie-Louise
+
+50.84682195192238, 4.37884097569863
+
+Canal Bruxelles
+
+50.85035531535269, 4.33733423361817
+
+
+http://localhost:1337/api/devices?populate[tests][populate][0]=locations
+
+attributes
+tests
+data
+attributes
+Test1
